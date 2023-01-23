@@ -2,7 +2,8 @@
 @use 'base/variables' as v;
 .sobre-videos{
     h2{
-        text-align: center
+        text-align: center;
+        text-transform: uppercase;
     }
 }
 
@@ -20,6 +21,7 @@
     a{
         display: block;
         text-align: center;
+        text-transform: uppercase;
         color:#b7ac7f;
         padding:2rem 1rem ;
         background-color: v.$negro;
