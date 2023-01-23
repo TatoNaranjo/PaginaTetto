@@ -1,0 +1,30 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header{
+
+  h1{
+    text-align: center;
+    @include m.tablet {
+          margin: 0;
+    }
+  }
+  span{
+    color:#b7ac7f;
+  }
+  .contenido-header{
+    padding: 2rem;
+    @include m.tablet{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+  }
+
+}
+.show{
+    @include m.telefono{
+     border-left: 5rem;   
+    }
+}
