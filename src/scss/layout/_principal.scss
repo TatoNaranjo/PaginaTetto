@@ -1,0 +1,25 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.principal{
+    padding-top: 10rem;
+    h3{
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.news-container{
+    @include m.desktop {
+        @include m.grid(2,3rem);
+  }
+  h4{
+    font-size: 3.5rem;
+    text-align: center;
+    padding:2rem;
+
+  }
+  p{
+    padding-bottom:2rem ;
+    text-align: left;
+  }
+}

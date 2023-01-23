@@ -63,7 +63,7 @@ function versionAvif (done){
     quality:50
   };
   
-  src('src/img/**/*.{png,jpg}')
+  src('src/img/**/*.{png,jpg,jpeg}')
   .pipe(avif(opciones))
   .pipe(dest('build/img'))
   done();

@@ -13,7 +13,9 @@
     color:#b7ac7f;
   }
   .contenido-header{
+    position: relative;
     padding: 2rem;
+    margin-left: 0;
     @include m.tablet{
         display:flex;
         justify-content: space-between;
