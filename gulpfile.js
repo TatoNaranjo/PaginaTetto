@@ -70,9 +70,17 @@ function versionAvif (done){
 }
 
 function javascript(done){
-  src('src/js/**/*.js')
+  src('src/js/**/*.{js}')
   .pipe(sourcemaps.init())
   .pipe(terser())
+  .pipe(sourcemaps.write('.'))
+  .pipe(dest('build/js'))
+  done();
+}
+
+function json(done){
+  src('src/js/**/*.json')
+  .pipe(sourcemaps.init())
   .pipe(sourcemaps.write('.'))
   .pipe(dest('build/js'))
   done();
@@ -81,6 +89,7 @@ function javascript(done){
 function dev(done){
   watch('src/scss/**/*.scss',css)
   watch('src/js/**/*.js',javascript)
+  watch('src/js/**/*.json',json)
   done();
 }
 exports.css = css;
@@ -88,4 +97,4 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes,versionWebp,versionAvif,javascript,dev);
+exports.dev = parallel(imagenes,versionWebp,versionAvif,javascript,json,dev);

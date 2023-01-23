@@ -1,9 +1,8 @@
 let nextPageToken = ""
 
 
-
 function getvideos(){
-    fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCeIWn_wj33h_-pnxOgViRyA&maxResults=3&order=date&key=AIzaSyDAz_Tw7oO840L-gfpwliC2w0hL4rerKA0&pageToken="+nextPageToken)
+    fetch("./build/js/video.json")
     .then((result)=>{
         return result.json()
     }).then((data)=>{
