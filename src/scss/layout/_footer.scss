@@ -1,0 +1,100 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+.footer{
+    background-color: v.$negro;
+    p{
+        color:v.$blanco;
+        text-transform: uppercase;
+        
+        @include m.desktop {
+            text-align: right; 
+            font-size: 2rem;  
+        }
+      
+    }
+    h1{
+        margin: 0;
+        color: v.$blanco;
+        display: inline-block;
+        text-transform: uppercase;
+      
+        @include m.telefono {
+            font-size: .5rem;
+            text-align: left;
+        }
+        @include m.tablet {
+          font-size: 4rem;
+          margin: 0;
+        }
+        @include m.desktop {
+          font-size: 4rem;
+        }
+      }
+      span{
+        color:#b7ac7f;
+      }
+      .barra{
+        position: relative;
+        padding: 2rem;
+        gap:2rem;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+        @include m.telefono {
+         @include m.grid(1,1rem);
+          padding:.5rem;
+          justify-content: space-between;
+          align-items: center;
+      }
+        @include m.tablet{
+            @include m.grid(2,1rem);
+            padding: 2rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+      @include m.desktop {
+        @include m.grid(2,1rem);
+      }
+        
+      }
+    
+    }
+    .footer-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      margin: 0;
+    @include m.desktop {
+      padding-left: 3rem; 
+     
+    }
+    @include m.telefono {
+          text-align: center;
+        
+    }
+    }
+    .footer-text_2{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 2rem;
+        margin: 0;
+        @include m.desktop {
+            padding-right: 5rem;
+            padding-top: 0;
+        }
+    
+            @include m.telefono {
+                text-align: center;
+                font-size: 1rem;
+                
+              
+             }
+        
+      
+            
+      }
+    
+    
