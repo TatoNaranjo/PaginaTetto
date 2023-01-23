@@ -2,19 +2,26 @@
 @use 'base/variables' as v;
 
 .header{
+  display: flex;
+  align-items: center;
   background-color: v.$negro;
   
   h1{
-    display: flex;
-    align-items: center;
+    margin: 0;
     color: v.$blanco;
+    
     text-transform: uppercase;
-    @include m.tablet {
-          margin: 0;
-    }
+  
     @include m.telefono {
-        font-size: 2.5rem;
+        font-size: .5rem;
         text-align: left;
+    }
+    @include m.tablet {
+      font-size: 4rem;
+      margin: 0;
+    }
+    @include m.desktop {
+      font-size: 4rem;
     }
   }
   span{
@@ -23,7 +30,10 @@
   .contenido-header{
     position: relative;
     padding: 2rem;
+    display: flex;
+    justify-content: space-between;
     margin-left: 0;
+    margin-right: 0;
     @include m.telefono {
       padding:.5rem;
       justify-content: space-between;
@@ -40,8 +50,18 @@
   }
 
 }
+.header-text{
+  display: inline-block;
+  margin: 0;
+@include m.desktop {
+  padding-left: 3rem; 
+}
+}
 .show{
     @include m.telefono{
      border-left: 5rem;   
     }
+}
+.hidden{
+  display: none;
 }
