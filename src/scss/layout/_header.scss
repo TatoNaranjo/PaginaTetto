@@ -2,11 +2,19 @@
 @use 'base/variables' as v;
 
 .header{
-
+  background-color: v.$negro;
+  
   h1{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    color: v.$blanco;
+    text-transform: uppercase;
     @include m.tablet {
           margin: 0;
+    }
+    @include m.telefono {
+        font-size: 2.5rem;
+        text-align: left;
     }
   }
   span{
@@ -16,11 +24,18 @@
     position: relative;
     padding: 2rem;
     margin-left: 0;
+    @include m.telefono {
+      padding:.5rem;
+      justify-content: space-between;
+      align-items: center;
+  }
     @include m.tablet{
-        display:flex;
+        @include m.grid(1,1rem);
+        padding: 2rem;
         justify-content: space-between;
         align-items: center;
     }
+  
     
   }
 
