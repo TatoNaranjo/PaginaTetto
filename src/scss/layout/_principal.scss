@@ -36,3 +36,30 @@
     }
   }
 }
+.info_container{
+  h3{
+    text-align: center;
+  }
+ 
+}
+.about_me{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img{
+    max-width: 90rem;
+    align-items: center;
+  }
+p{
+  padding-top: 2rem;
+  padding-bottom:2rem;
+  text-align: left;
+  font-size: 2rem;
+  font-size: 1.5rem;
+  @include m.desktop {
+      font-size: 2rem;
+  }
+}
+
+}

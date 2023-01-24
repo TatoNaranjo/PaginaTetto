@@ -14,7 +14,7 @@
     text-transform: uppercase;
 
     @include m.desktop {
-      font-size: 4rem;
+      font-size: 3.5rem;
     
     }
   }
@@ -35,7 +35,7 @@
   }
     @include m.tablet{
         @include m.grid(1,1rem);
-        padding: 2rem;
+        padding: 1.6rem;
         justify-content: space-between;
         align-items: center;
     }
