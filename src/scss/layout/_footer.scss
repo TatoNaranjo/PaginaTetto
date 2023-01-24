@@ -40,20 +40,15 @@
         justify-content: space-between;
         margin-left: 0;
         margin-right: 0;
-        @include m.telefono {
-         @include m.grid(1,1rem);
-          padding:.5rem;
-          justify-content: space-between;
-          align-items: center;
-      }
-        @include m.tablet{
-            @include m.grid(2,1rem);
-            padding: 2rem;
-            justify-content: space-between;
-            align-items: center;
-        }
+        @include m.grid(1,1rem);
+        padding:.5rem;
+        justify-content: space-between;
+        align-items: center;
       @include m.desktop {
         @include m.grid(2,1rem);
+        padding: 2rem;
+        justify-content: space-between;
+        align-items: center;
       }
         
       }
@@ -63,15 +58,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
       margin: 0;
+      padding-top: 2rem;
+      font-size: 1.5rem;
     @include m.desktop {
       padding-left: 3rem; 
+      font-size: 2rem;
+      padding-top: 0;
      
     }
-    @include m.telefono {
-          text-align: center;
-        
-    }
+ 
     }
     .footer-text_2{
         
