@@ -67,6 +67,9 @@
   }
   a{
     color: v.$negro;
+    &:hover{
+      color:#b7ac7f;
+    }
   }
   h2{
     padding-top: 4rem;
