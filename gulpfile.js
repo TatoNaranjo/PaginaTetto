@@ -78,10 +78,11 @@ function javascript(done){
   done();
 }
 function jpeg(done){
-  src('src/img/**/*.jpeg')
+  src('src/img/**/*{.jpeg}')
   .pipe(sourcemaps.init())
+  .pipe(terser())
   .pipe(sourcemaps.write('.'))
-  .pipe(dest('build/principalImages'))
+  .pipe(dest('build/img'))
   done();
 }
 
