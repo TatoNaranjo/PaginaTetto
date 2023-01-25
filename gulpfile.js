@@ -77,6 +77,13 @@ function javascript(done){
   .pipe(dest('build/js'))
   done();
 }
+function jpeg(done){
+  src('src/img/**/*.jpeg')
+  .pipe(sourcemaps.init())
+  .pipe(sourcemaps.write('.'))
+  .pipe(dest('build/principalImages'))
+  done();
+}
 
 function json(done){
   src('src/js/**/*.json')
@@ -97,4 +104,4 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes,versionWebp,versionAvif,javascript,json,dev);
+exports.dev = parallel(imagenes,versionWebp,versionAvif,jpeg,javascript,json,dev);
