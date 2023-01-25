@@ -6,10 +6,11 @@
   align-items: center;
   background-color: v.$negro;
   
-  h1{
+  a{
     margin: 0;
     color: v.$blanco;
     font-size: 1.7rem;
+    font-weight: bold;
     text-align: left;
     text-transform: uppercase;
 
@@ -17,6 +18,9 @@
       font-size: 3.5rem;
     
     }
+  }
+  h1{
+  
   }
   span{
     color:#b7ac7f;
