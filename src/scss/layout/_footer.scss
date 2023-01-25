@@ -102,5 +102,30 @@
           
         }
       }
+      .display-sub{
+       
+      }
+      .sub-footer{
+        display: flex;
+        padding-top: 3rem;
+        text-align: center;
+        
+        flex-direction: column;
+        @include m.desktop {
+          padding-top:0 ;
+            flex-direction: row;
+            padding-left: 20rem;
+        }
+        gap: 2rem;
+        margin-right: 0;
+        li{
+          a{
+            color: v.$blanco;
+            &:hover{
+              color: #b7ac7f;
+            }
+          }
+        }
+      }
      
     
