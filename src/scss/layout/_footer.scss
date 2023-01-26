@@ -105,11 +105,13 @@
       .sub-footer{
         display: flex;
         padding-top: 3rem;
+        padding-bottom: 3rem;
         text-align: center;
         
         flex-direction: column;
         @include m.desktop {
           padding-top:0 ;
+          padding-bottom: 0;
             flex-direction: row;
             padding-left: 20rem;
         }
