@@ -1,6 +1,31 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
 
+.error{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12rem;
+  text-align: center;
+  text-transform: uppercase;
+  a{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color:v.$blanco;
+    padding:2rem 2rem ;
+    background-color: v.$negro;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    @include m.tablet {
+          margin: 0;
+    }
+    &:hover{ //Caracter especial que anida correctamente el hover al enlace
+        color:v.$amarillo;
+    }
+}
+}
 .principal{
     padding-top: 10rem;
    h2{

@@ -55,18 +55,19 @@
     
     }
     .footer-text{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+    a{
       margin: 0;
-      padding-top: 2rem;
-      font-size: 1.5rem;
-    @include m.desktop {
-      padding-left: 3rem; 
-      font-size: 2rem;
-      padding-top: 0;
-     
+      color: v.$blanco;
+      padding-left: 25rem;
+      font-size: 1.7rem;
+      font-weight: bold;
+      text-align: left;
+      text-transform: uppercase;
+  
+      @include m.desktop {
+        font-size: 3.5rem;
+      
+      }
     }
  
     }
