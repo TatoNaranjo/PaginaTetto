@@ -21,7 +21,7 @@ function getvideos(){
             <div class = "video-info">
             <h3>${video.snippet.title}</h3>
             <p>${video.snippet.description}</p>
-            <a href ="https://www.youtube.com/watch?v=${video.id.videoId}">Ingresa al Video</a>
+            <a href ="https://www.youtube.com/watch?v=${video.id.videoId}" class = "video-button">Ingresa al Video</a>
             </div>
         </div>
             `
